@@ -34,3 +34,6 @@ Antes de comenzar, asegúrate de tener Python instalado en tu computadora. Puede
 
    ```bash
    brew install python
+
+## Creado por: Guillermo Natali Ulla
+-[portfolio](http://nataliullacoder.com/)

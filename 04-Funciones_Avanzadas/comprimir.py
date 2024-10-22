@@ -1,32 +1,38 @@
-#import zipfile
-'''
-#------- Comprimir archivo con zip ------------#
-mi_zip = zipfile.ZipFile('mi_archivo_comprimido.zip','w')
-
-mi_zip.write('texto_A.txt')
-mi_zip.write('texto_B.txt')
-
-mi_zip.close()
-#---------------------------------------------#
-'''
-'''
-#------- Extraer archivo con zip ------------#
-zip_abierto = zipfile.ZipFile('mi_archivo_comprimido.zip','r')
-zip_abierto.extractall()    #extrae todo
-
-#---------------------------------------------#
-'''
+import zipfile
 import shutil
 
-'''
-#------- Comprimir archivo con shutil ------------#
+# Comprimir archivos con zipfile
 
-origen = 'C:\\Users\\maria\\OneDrive\\guille\\Escritorio\\Nueva carpeta'
 
-archivo_destino = 'Todo_comprimido'
-shutil.make_archive(archivo_destino,'zip',origen)
-#---------------------------------------------#
-'''
-#------- Extraer archivo con shutil ------------#
+def comprimir_zip():
+    mi_zip = zipfile.ZipFile('mi_archivo_comprimido.zip', 'w')
+    mi_zip.write('texto_A.txt')
+    mi_zip.write('texto_B.txt')
+    mi_zip.close()
 
-shutil.unpack_archive('Todo_comprimido.zip','Nueva_carpeta', 'zip')
+# Extraer archivos con zipfile
+
+
+def extraer_zip():
+    zip_abierto = zipfile.ZipFile('mi_archivo_comprimido.zip', 'r')
+    zip_abierto.extractall()
+
+# Comprimir con shutil
+
+
+def comprimir_shutil():
+    origen = 'C:\\ruta\\a\\la\\carpeta'
+    destino = 'Todo_comprimido'
+    shutil.make_archive(destino, 'zip', origen)
+
+# Extraer con shutil
+
+
+def extraer_shutil():
+    shutil.unpack_archive('Todo_comprimido.zip', 'Nueva_carpeta', 'zip')
+
+
+comprimir_zip()
+extraer_zip()
+comprimir_shutil()
+extraer_shutil()

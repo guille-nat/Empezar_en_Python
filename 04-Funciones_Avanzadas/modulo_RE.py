@@ -20,23 +20,17 @@ CAR         DESCRIPCION                 EJEMPLO
 ^           empieza con                 ^hola
 '''
 
+
+# Buscar un número de teléfono en el texto
 import re
+texto = 'Si necesitas ayuda llama al 658-598-9977 las 24 horas.'
+patron = re.compile(r'(\d{3})-(\d{3})-(\d{4})')
 
-
-
-texto = 'Si necesitas ayuda llama al 658-598-9977 las 24 horas al servicio de ayuda online'
-
-#patron = 'ayuda'
-
-#busqueda = re.search(patron,texto) #Busca la palabra ayuda en el txto
-#print(busqueda)
-
-patron = re.compile( r'(\d{3})-(\d{3})-(\d{4})')
-
+# Realizar la búsqueda
 resultado = re.search(patron, texto)
+print(f'Teléfono encontrado: {resultado.group()}')
 
-#print(resultado.group(2))   #da el segundo termino
-
-texto2 = 'No atendemos los Lunes por la mañana'
-buscar = re.search(r'Lunes|Martes',texto2)  # | <-- significa O
-print(buscar)
+# Buscar días de la semana en el texto
+texto2 = 'No atendemos los Lunes ni los Martes'
+buscar = re.search(r'Lunes|Martes', texto2)
+print(f'Día encontrado: {buscar.group()}')

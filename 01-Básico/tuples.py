@@ -1,16 +1,12 @@
-#no se pueden modificar y ocupan m enos espacio en la memoria que las listas
-#poseen índices (se cuentan de izquierda a derecha)
+# no se pueden modificar y ocupan m enos espacio en la memoria que las listas
+# poseen índices (se cuentan de izquierda a derecha)
 
-#mi_tuple = (1,2,(10,20),4)        #pueden tener cualquier tipo de objeto e incluso se pueden convinar
+# Ejemplos de tuplas en Python
 
-#mi_tuple = list(mi_tuple)  #se pueden modificar mediante asignacion como un tipo distinto
+t = (1, 2, 3, 1)
 
-#print(mi_tuple[2][0])   #igual a listas y diccionarios
+# Contar cuántas veces aparece el número 1
+print(f"El número 1 aparece {t.count(1)} veces en la tupla")
 
-
-t = (1,2,3,1)
-
-
-#print(t.count(1))           #permite contar cuantas veces esta ese objeto en tu tuple
-
-print(t.index(2))
+# Encontrar la posición del número 2
+print(f"La posición del número 2 en la tupla es: {t.index(2)}")

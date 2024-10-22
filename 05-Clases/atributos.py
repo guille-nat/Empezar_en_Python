@@ -1,19 +1,17 @@
-''''
-existen dos tipos de atributos los de Clase y los de instancia
-'''
-#-------------------------------------------------------------------------------#
-
-
 class Pajaro:
-    alas = True #ATRIBUTOS DE CLASE
+    # Atributo de clase (compartido por todas las instancias)
+    alas = True
 
-    # ATRIBUTO DE INSTANCIA
-    def __init__(self, color,especie):      #definimos atributos de clase       #__init__ es el "constructor de la clase" sirve para asignarle atributos
-        self.color = color  #self es la instancia del objeto, es una convencion
+    # Atributos de instancia (específicos para cada instancia)
+    def __init__(self, color, especie):
+        self.color = color
         self.especie = especie
 
-mi_pajaro = Pajaro('rojo','Tucan')
 
-print(f'Mi pajaro es un {mi_pajaro.especie} y es de color {mi_pajaro.color}')
+# Crear instancias de la clase
+mi_pajaro = Pajaro('rojo', 'Tucán')
+otro_pajaro = Pajaro('azul', 'Loro')
 
-#-------------------------------------------------------------------------------#
+# Imprimir atributos de instancia y de clase
+print(f'Mi pájaro es un {mi_pajaro.especie} y es de color {mi_pajaro.color}')
+print(f'Todos los pájaros tienen alas: {mi_pajaro.alas}')

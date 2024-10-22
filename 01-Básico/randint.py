@@ -1,19 +1,23 @@
-from random import *                    #con el * importa todo de la libreria
-                                        #sino elegimos uno especifico
+from random import randint, uniform, choice, shuffle, random
 
-aleatorio = randint(1,50)   #desde donde a donde
+# Generar un número aleatorio entero entre 1 y 50
+aleatorio = randint(1, 50)
+print(f"Número aleatorio entero: {aleatorio}")
 
-aleatorio2 = round(uniform(1,5),1)      #uniform lo mismo que randint pero con num decimales
+# Generar un número decimal entre 1 y 5 con un decimal
+aleatorio2 = round(uniform(1, 5), 1)
+print(f"Número aleatorio decimal: {aleatorio2}")
 
-aleatorio3 = random()   #elije un numero decimal entre 0 y 1
+# Generar un número decimal entre 0 y 1
+aleatorio3 = random()
+print(f"Número aleatorio entre 0 y 1: {aleatorio3}")
 
-colores = ['azul','gris','rojo','violeta']
-aleatorio4 = choice(colores)                        #trabajar con elementos aleatorios con los elementos dentro de una lista
+# Elegir un color al azar de una lista
+colores = ['azul', 'gris', 'rojo', 'violeta']
+aleatorio4 = choice(colores)
+print(f"Color aleatorio: {aleatorio4}")
 
-
-numeros = list(range(5,50,5))
-shuffle(numeros)            #hace una mezcla aleatoria de numeros pero siempre respetando que pertenezcan a la lista
-                            #genera una modificacion en el lugar
-
-print(numeros)
-
+# Mezclar una lista de números
+numeros = list(range(5, 50, 5))
+shuffle(numeros)
+print(f"Números mezclados: {numeros}")

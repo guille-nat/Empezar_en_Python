@@ -1,31 +1,20 @@
-# kwargs significa palabra clave, trabaja con diccionarios
+# Uso de **kwargs para aceptar argumentos de palabra clave
 
-#primer ejemplo:
-#def suma(**kwargs):
-    #print(type(kwargs)) #transforma en diccionario
-    #total = 0
+def prueba(num1, num2, *args, **kwargs):
+    """Imprime los argumentos regulares, *args y **kwargs"""
+    print(f'El primer valor es {num1}')
+    print(f'El segundo valor es {num2}')
 
-   # for clave,valor in kwargs.items():  #usa las propiedades de los diccionarios
-     #   print(f'{clave} = {valor}')
-    #    total += valor
-   # return total
-#print(suma(x=2,y=5,=3))z
-
-
-def prueba(num1,num2,*args,**kwargs):     #si se quiere usar todos estos se colocan en este orden
-    print(f'el primer valor es {num1}')
-    print(f'el segundo valor es {num2}')
-
+    # Imprimir los argumentos adicionales
     for arg in args:
         print(f'arg = {arg}')
 
-    for clave,valor in kwargs.items():
+    # Imprimir las palabras clave
+    for clave, valor in kwargs.items():
         print(f'{clave} = {valor}')
 
-args = [12,4033,22,22222,100]
-kwaegs = {'x':'uno', 'g':'cuatro', 'z':'tres'}
-prueba(12,4033,*args,**kwaegs)
 
-
-
-
+# Prueba de la función con *args y **kwargs
+args = [12, 4033, 22, 22222, 100]
+kwargs = {'x': 'uno', 'g': 'cuatro', 'z': 'tres'}
+prueba(12, 4033, *args, **kwargs)

@@ -1,16 +1,16 @@
-
-
-# * Operadores Matemáticos:
+# Ejemplos de operadores matemáticos en Python
 x = 6
 y = 2
 z = 9
-print(f"El valor {x} elevado a {y} es {x ** y}")
 
-# Hace una divicion donde trunca el resultado
-print(f"{z} dividido al piso de {y} es igual a {z//y}")
+# Exponenciación
+print(f"El valor {x} elevado a {y} es {x ** y}")  # 6^2 = 36
 
-# Nos da el resto de la divición (nos sirve para descubrir numeros impares) (si es igual a 1 es impar)
-print(f"{z} modulo de {y} es igual {z%y}")
+# División entera (truncada)
+print(f"{z} dividido por {y} es igual a {z//y}")  # 9//2 = 4
 
-# Cualquier valor multiplicado con 2 * en 0.5 es la raíz cuadrada
-print(f"la raiz cuadrada de {x} es {x**0.5}")
+# Módulo (resto de la división)
+print(f"{z} módulo de {y} es igual a {z%y}")  # 9 % 2 = 1 (impar)
+
+# Raíz cuadrada
+print(f"La raíz cuadrada de {x} es {x**0.5}")  # sqrt(6)

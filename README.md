@@ -35,5 +35,14 @@ Antes de comenzar, asegúrate de tener Python instalado en tu computadora. Puede
    ```bash
    brew install python
 
+### Para Linux
+
+1. Abre la Terminal.
+2. Instala Python utilizando el gestor de paquetes de tu distribución, por ejemplo:
+   - sudo apt install python3
+
+### Soporte y Contacto
+
+Si tienes preguntas o necesitas ayuda con los contenidos del repositorio, no dudes en abrir un issue aquí en GitHub o contactarme directamente a través de mi -[portfolio](http://nataliullacoder.com/).
+
 ## Creado por: Guillermo Natali Ulla
--[portfolio](http://nataliullacoder.com/)

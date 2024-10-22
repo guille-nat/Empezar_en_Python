@@ -1,2 +1,4 @@
+# Función para saludar
 def hola():
-	print('holaaaa')
+    """Imprime un saludo"""
+    print("¡Hola! Bienvenido al paquete de ejemplos.")

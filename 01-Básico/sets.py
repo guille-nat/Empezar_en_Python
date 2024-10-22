@@ -6,32 +6,22 @@
 # las listas ni diccionarios se pueden poner dentro de un set
 # si admite tuple (ya que son inmutables y no estan ordenados)
 
+# Conjuntos en Python (sets)
 
-#mi_set = set((1,2,3,4,5))
-#print(type(mi_set))
-#print(len(mi_set))
-#print(2 in mi_set)
+s1 = {1, 2, 3}
+s2 = {3, 4, 5}
 
-#otro_set = {1,2,3}
-#print(otro_set)
+# Unión de conjuntos
+s3 = s1.union(s2)
+print(f"Unión de s1 y s2: {s3}")
 
-#realizar union de sets
+# Agregar un elemento
+s1.add(4)
 
-s1 = {1,2,3}
-#s2 = {3,4,5}
-#s3 = s1.union(s2)               # usando .union() unimos 2 sets
+# Eliminar un elemento
+s1.remove(2)
 
-#s1.add(4)       #para agregar un elemento
-
-#s1.remove(2)    #sirve para remover un elemento
-
-#s1.discard(6)   #lo mismo que remove excepto que si no existe el elemento no me da error
-
-#s1.pop()        #elimina un elemento aleatorio ya que no hay ningun orden
-
-#s1.clear()         #elimina o limpia todo
+# Limpiar el conjunto
+s1.clear()
 
 print(s1)
-
-
-

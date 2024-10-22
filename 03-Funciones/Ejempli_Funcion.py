@@ -1,23 +1,20 @@
-precios_cafe = [('capuchino',1.5),('exprresso',1.2),('moka',1.9)]
+# Buscar el café más caro en una lista de precios
 
-def cafe_mas_caro (lista_precios):
-    band = True
+precios_cafe = [('capuchino', 1.5), ('espresso', 1.2), ('moka', 1.9)]
 
-    for cafe,precio in lista_precios:
-        if band == True:
-            precio_mayor = precio
+
+def cafe_mas_caro(lista_precios):
+    """Devuelve el café más caro y su precio"""
+    cafe_mas_costoso, precio_mayor = lista_precios[0]  # Inicializamos con el primer café
+    for cafe, precio in lista_precios:
+        if precio > precio_mayor:
             cafe_mas_costoso = cafe
-            band = False
-
-        elif precio > precio_mayor:
             precio_mayor = precio
-            cafe_mas_costoso = cafe
-        else:
-            pass
-    return (cafe_mas_costoso,precio_mayor)
-
-cafe,precio = cafe_mas_caro(precios_cafe)
-print(f'El café mas caro es {cafe} cuyo precio es {precio}')
+    return cafe_mas_costoso, precio_mayor
 
 
-#las funciones pueden retornar dos valores
+# Prueba de la función
+cafe, precio = cafe_mas_caro(precios_cafe)
+print(f'El café más caro es {cafe} con un precio de {precio}')
+
+# las funciones pueden retornar dos valores

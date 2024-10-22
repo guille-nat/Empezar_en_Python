@@ -2,17 +2,10 @@
 # 'r' --> para solo leer el archivo, con este no se puede escribir en él. Ej. archivo = open('prueba.txt', 'r')
 # 'a' --> lee el archivo y se posiciona al final del mismo para continuar escribiendo y asi no perder nada. Ej. archivo = open('prueba.txt', 'w')
 
-archivo = open('prueba.txt', 'a')
+# Abrir un archivo en modo 'a' para añadir contenido al final
+with open('prueba.txt', 'a') as archivo:
+    archivo.write('\nBienvenido')  # Añadir texto al final
 
-#lista = ['hola','mundo','aqui','estoy']
-
-#archivo.write('\n biembenido')
-
-
-
-'''for p in lista:
-    archivo.writelines(p + '\n')
-archivo.write('Soy el nuevo texto')     # sirve para escribir en un archivo
-'''
-
-archivo.close()
+# Alternativamente, podrías usar 'w' para sobrescribir todo el contenido
+with open('prueba.txt', 'w') as archivo:
+    archivo.write('Este es un nuevo texto que reemplaza el anterior')

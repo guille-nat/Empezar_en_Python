@@ -1,14 +1,20 @@
-lista = ['a','b','c']
-#for indice,item in enumerate(lista):       #enumera los items, en una especie e tupla
-#    print(indice,item)
-#for indice,item in enumerate(range(50,101)):       # se puede convinar
-#    print(indice,item)
+# Ejemplo de uso de enumerate
 
-#mis_tuples = list(enumerate(lista))
-#print(mis_tuples[1][0])
-#print(mis_tuples)
+lista = ['a', 'b', 'c']
 
-lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
-for indice,nombre in enumerate(lista_nombres):
-    if nombre.startswith('M'):      #.startswith()  significa comienza con
+# Enumerar los elementos de la lista
+for indice, item in enumerate(lista):
+    print(f"Índice: {indice}, Elemento: {item}")
+
+# También se puede enumerar rangos de números
+for indice, numero in enumerate(range(50, 101)):
+    print(f"Índice: {indice}, Número: {numero}")
+
+lista_nombres = [
+    "Marcos", "Laura", "Mónica",
+    "Javier", "Celina", "Marta",
+    "Darío", "Emiliano", "Melisa"
+]
+for indice, nombre in enumerate(lista_nombres):
+    if nombre.startswith('M'):  # .startswith()  significa comienza con
         print(indice)

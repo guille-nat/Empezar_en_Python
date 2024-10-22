@@ -1,5 +1,8 @@
-def equivocado():       #muestra mensaje cuando el usuario se equivoca
-    print("\tPor favor ingrese una opcion valida...\n\n")
+import os
+
+
+def equivocado():
+    """Muestra un mensaje de error cuando el usuario se equivoca"""
+    print("\tPor favor ingrese una opción válida...\n\n")
     os.system('pause')
-    system("cls")
-    pass
+    os.system('cls')

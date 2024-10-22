@@ -1,6 +1,11 @@
-for numero in range(20,31,2): # primer número es desde doonde empieza, el segundo hata donde termina
-                              # el tercero es los saltos que da entre los números
+# Uso de range() en Python
+# Recordar que Python comienza a contar desde el 0 y no incluye el ultimo número
+# si queremos recorrer del 1 al 10 -> deberia de poner range(1,11) -> ya que no incluye el 11
+
+# Generar números del 20 al 30, saltando de 2 en 2
+for numero in range(20, 31, 2):
     print(numero)
 
-lista = list(range(1,101))   # el ultimo numero que es donde termina no lo incluye
+# Crear una lista de números del 1 al 100
+lista = list(range(1, 101))
 print(lista)

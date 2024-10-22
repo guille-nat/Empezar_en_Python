@@ -1,13 +1,13 @@
-#* args    #lo que hace es aceptar la cantidad cualquiera de argumentos que le pase el usuario
 
+# Uso de *args para aceptar múltiples argumentos
 
-
-#ejemplo
 def suma(*args):
+    """Suma todos los números que se pasen como argumento"""
     total = 0
-
     for arg in args:
         total += arg
     return total
 
-print(suma(12,22,3,444,5,0))
+
+# Prueba de la función con varios números
+print(suma(12, 22, 3, 444, 5, 0))
